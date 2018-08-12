@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/avatar"
+        style="@style/ReviewImageLayout"
+        android:contentDescription="@string/imageView"
+        android:src="@drawable/pirate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/round_shape" />
+
+    <TextView
+        android:id="@+id/reviewer_name"
+        style="@style/BaseLayout"
+        android:theme="@style/BlackTextColor"
+        android:textSize="17sp"
+        android:text="@string/review_name_1"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Layout for review star images -->
+    <ImageView
+        android:id="@+id/reviewstar_1"
+        style="@style/FirstStarImageLayoutBase"
+        android:contentDescription="@string/imageView"
+        app:layout_constraintStart_toEndOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/reviewer_name" />
+
+    <ImageView
+        android:id="@+id/reviewstar_2"
+        style="@style/FirstStarImageLayoutBase.Others"
+        android:contentDescription="@string/imageView"
+        app:layout_constraintStart_toEndOf="@id/reviewstar_1"
+        app:layout_constraintTop_toBottomOf="@id/reviewer_name" />
+
+    <ImageView
+        android:id="@+id/reviewstar_3"
+        style="@style/FirstStarImageLayoutBase.Others"
+        android:contentDescription="@string/imageView"
+        app:layout_constraintStart_toEndOf="@id/reviewstar_2"
+        app:layout_constraintTop_toBottomOf="@id/reviewer_name" />
+
+    <ImageView
+        android:id="@+id/reviewstar_4"
+        style="@style/FirstStarImageLayoutBase.Others"
+        android:contentDescription="@string/imageView"
+        app:layout_constraintStart_toEndOf="@id/reviewstar_3"
+        app:layout_constraintTop_toBottomOf="@id/reviewer_name" />
+
+    <ImageView
+        android:id="@+id/reviewstar_5"
+        style="@style/FirstStarImageLayoutBase.Others"
+        android:contentDescription="@string/imageView"
+        app:layout_constraintStart_toEndOf="@id/reviewstar_4"
+        app:layout_constraintTop_toBottomOf="@id/reviewer_name" />
+
+    <!-- Layout for review date text -->
+    <TextView
+        android:id="@+id/date"
+        style="@style/BaseLayout.NormalText.ReviewDate"
+        android:text="@string/date_1"
+        app:layout_constraintStart_toEndOf="@id/reviewstar_5"
+        app:layout_constraintTop_toTopOf="@+id/reviewstar_5"
+        app:layout_constraintBottom_toBottomOf="@+id/reviewstar_5"/>
+
+    <!-- Layout for three dots image -->
+    <ImageView
+        android:id="@+id/ivw_threedots"
+        style="@style/ThumbUpAndDots.Dots"
+        android:contentDescription="@string/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Layout for thumb up image -->
+    <ImageView
+        style="@style/ThumbUpAndDots"
+        android:contentDescription="@string/imageView"
+        app:layout_constraintEnd_toStartOf="@id/ivw_threedots"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Layout for review title text -->
+    <TextView
+        android:id="@+id/review_title"
+        style="@style/BaseLayout"
+        android:theme="@style/BlackTextColor"
+        android:text="@string/review_title_1"
+        app:layout_constraintTop_toBottomOf="@id/reviewstar_1"
+        app:layout_constraintStart_toEndOf="@id/avatar"/>
+
+    <!-- Layout for review description text -->
+    <TextView
+        android:id="@+id/review_desc"
+        style="@style/BaseLayout.NormalText.ReviewDetails"
+        android:paddingBottom="16dp"
+        android:text="@string/review_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/review_title" />
+</android.support.constraint.ConstraintLayout>

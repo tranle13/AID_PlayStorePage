@@ -51,7 +51,8 @@
             <!-- Layout for app name and developer name-->
                 <TextView
                     android:id="@+id/appName"
-                    style="@style/BaseLayout.BoldText"
+                    style="@style/BaseLayout"
+                    android:theme="@style/BlackTextColor"
                     android:text="@string/appname"
                     android:textSize="22sp"
                     app:layout_constraintStart_toEndOf="@+id/appImage"
@@ -140,7 +141,7 @@
                         android:layout_toEndOf="@id/ivw_WhatsNew"
                         android:gravity="center"
                         android:text="@string/whats_new_title"
-                        android:textColor="@color/green"
+                        android:theme="@style/GreenText"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@+id/ivw_WhatsNew"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -154,7 +155,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/whats_new_1"
-                        android:textColor="@color/green"
+                        android:theme="@style/GreenText"
                         app:layout_constraintStart_toStartOf="@+id/txt_WhatsNew"
                         app:layout_constraintTop_toBottomOf="@id/txt_WhatsNew" />
 
@@ -163,7 +164,7 @@
                         android:layout_height="wrap_content"
                         android:paddingBottom="16dp"
                         android:text="@string/whats_new_2"
-                        android:textColor="@color/green"
+                        android:theme="@style/GreenText"
                         app:layout_constraintStart_toStartOf="@+id/txt_NewFeature_1"
                         app:layout_constraintTop_toBottomOf="@+id/txt_NewFeature_1" />
                 </android.support.constraint.ConstraintLayout>
@@ -201,485 +202,31 @@
                         android:src="@drawable/app_image_3" />
                 </LinearLayout>
 
-        <!-- The first reviewer -->
-            <!-- Layout for reviewer avatar image -->
-                <ImageView
-                    android:id="@+id/avatar_1"
-                    style="@style/ReviewImageLayout"
-                    android:contentDescription="@string/imageView"
-                    android:src="@drawable/pirate"
+            <!-- Layout for listview for reviews -->
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0dp"
+                    android:isScrollContainer="false"
+                    android:scrollbars="none"
+                    android:clickable="false"
+                    android:listSelector="@android:color/transparent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/appImage_linearLayout" />
-
-            <!-- Layout for reviewer name text -->
-                <TextView
-                    android:id="@+id/reviewer_name_1"
-                    style="@style/BaseLayout.BoldText.ReviewBold"
-                    android:text="@string/review_name_1"
-                    app:layout_constraintStart_toEndOf="@+id/avatar_1"
-                    app:layout_constraintTop_toBottomOf="@+id/appImage_linearLayout" />
-
-            <!-- Layout for review star images -->
-                <ImageView
-                    android:id="@+id/reviewstar1_1"
-                    style="@style/FirstStarImageLayoutBase"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/avatar_1"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_1" />
-
-                <ImageView
-                    android:id="@+id/reviewstar1_2"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar1_1"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_1" />
-
-                <ImageView
-                    android:id="@+id/reviewstar1_3"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar1_2"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_1" />
-
-                <ImageView
-                    android:id="@+id/reviewstar1_4"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar1_3"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_1" />
-
-                <ImageView
-                    android:id="@+id/reviewstar1_5"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar1_4"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_1" />
-
-            <!-- Layout for review date text -->
-                <TextView
-                    style="@style/BaseLayout.NormalText.ReviewDate"
-                    android:text="@string/date_1"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar1_5"
-                    app:layout_constraintTop_toTopOf="@+id/reviewstar1_5"
-                    app:layout_constraintBottom_toBottomOf="@+id/reviewstar1_5"/>
-
-            <!-- Layout for three dots image -->
-                <ImageView
-                    android:id="@+id/ivw_threedots1"
-                    style="@style/ThumbUpAndDots.Dots"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/appImage_linearLayout" />
-
-            <!-- Layout for thumb up image -->
-                <ImageView
-                    style="@style/ThumbUpAndDots"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintEnd_toStartOf="@id/ivw_threedots1"
-                    app:layout_constraintTop_toBottomOf="@id/appImage_linearLayout" />
-
-            <!-- Layout for review title text -->
-                <TextView
-                    android:id="@+id/review_title_1"
-                    style="@style/BaseLayout.BoldText"
-                    android:text="@string/review_title_1"
-                    app:layout_constraintTop_toBottomOf="@id/reviewstar1_1"
-                    app:layout_constraintStart_toEndOf="@id/avatar_1"/>
-
-            <!-- Layout for review description text -->
-                <TextView
-                    android:id="@+id/review_desc_1"
-                    style="@style/BaseLayout.NormalText.ReviewDetails"
-                    android:text="@string/review_1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/avatar_1"
-                    app:layout_constraintTop_toBottomOf="@id/review_title_1" />
-
-        <!-- The second reviewer -->
-            <!-- Layout for reviewer avatar image -->
-                <ImageView
-                    android:id="@+id/avatar_2"
-                    style="@style/ReviewImageLayout"
-                    android:contentDescription="@string/imageView"
-                    android:src="@drawable/superhero"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/review_desc_1" />
-
-            <!-- Layout for reviewer name text -->
-                <TextView
-                    android:id="@+id/reviewer_name_2"
-                    style="@style/BaseLayout.BoldText.ReviewBold"
-                    android:text="@string/review_name_2"
-                    app:layout_constraintStart_toEndOf="@+id/avatar_2"
-                    app:layout_constraintTop_toBottomOf="@+id/review_desc_1" />
-
-            <!-- Layout for review star images -->
-                <ImageView
-                    android:id="@+id/reviewstar2_1"
-                    style="@style/FirstStarImageLayoutBase"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/avatar_2"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_2" />
-
-                <ImageView
-                    android:id="@+id/reviewstar2_2"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar2_1"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_2" />
-
-                <ImageView
-                    android:id="@+id/reviewstar2_3"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar2_2"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_2" />
-
-                <ImageView
-                    android:id="@+id/imageView14"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar2_3"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_2" />
-
-                <ImageView
-                    android:id="@+id/reviewstar2_4"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/imageView14"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_2" />
-
-            <!-- Layout for review date text -->
-                <TextView
-                    style="@style/BaseLayout.NormalText.ReviewDate"
-                    android:text="@string/date_2"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar2_4"
-                    app:layout_constraintTop_toTopOf="@+id/reviewstar2_4"
-                    app:layout_constraintBottom_toBottomOf="@+id/reviewstar2_4"/>
-
-            <!-- Layout for three dots image -->
-                <ImageView
-                    android:id="@+id/ivw_threedots2"
-                    style="@style/ThumbUpAndDots.Dots"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/review_desc_1" />
-
-                <!-- Layout for thumb up image -->
-                <ImageView
-                    style="@style/ThumbUpAndDots"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintEnd_toStartOf="@id/ivw_threedots2"
-                    app:layout_constraintTop_toBottomOf="@id/review_desc_1" />
-
-            <!-- Layout for review title text -->
-                <TextView
-                    android:id="@+id/review_title_2"
-                    style="@style/BaseLayout.BoldText"
-                    android:text="@string/review_title_2"
-                    app:layout_constraintTop_toBottomOf="@id/reviewstar2_1"
-                    app:layout_constraintStart_toEndOf="@id/avatar_2"/>
-
-            <!-- Layout for review description text -->
-                <TextView
-                    android:id="@+id/review_desc_2"
-                    style="@style/BaseLayout.NormalText.ReviewDetails"
-                    android:text="@string/review_2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/avatar_2"
-                    app:layout_constraintTop_toBottomOf="@id/review_title_2" />
-
-        <!-- The third reviewer-->
-            <!-- Layout for reviewer avatar image -->
-                <ImageView
-                    android:id="@+id/avatar_3"
-                    style="@style/ReviewImageLayout"
-                    android:contentDescription="@string/imageView"
-                    android:src="@drawable/man"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/review_desc_2" />
-
-            <!-- Layout for reviewer name text -->
-                <TextView
-                    android:id="@+id/reviewer_name_3"
-                    style="@style/BaseLayout.BoldText.ReviewBold"
-                    android:text="@string/review_name_3"
-                    app:layout_constraintStart_toEndOf="@+id/avatar_3"
-                    app:layout_constraintTop_toBottomOf="@+id/review_desc_2" />
-
-            <!-- Layout for review star images -->
-                <ImageView
-                    android:id="@+id/reviewstar3_1"
-                    style="@style/FirstStarImageLayoutBase"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/avatar_3"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_3" />
-
-                <ImageView
-                    android:id="@+id/reviewstar3_2"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar3_1"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_3" />
-
-                <ImageView
-                    android:id="@+id/reviewstar3_3"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar3_2"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_3" />
-
-                <ImageView
-                    android:id="@+id/reviewstar3_4"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar3_3"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_3" />
-
-                <ImageView
-                    android:id="@+id/reviewstar3_5"
-                    style="@style/FirstStarImageLayoutBase.Others.EmptyStar"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar3_4"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_3" />
-
-            <!-- Layout for review date text -->
-                <TextView
-                    style="@style/BaseLayout.NormalText.ReviewDate"
-                    android:text="@string/date_3"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar3_5"
-                    app:layout_constraintTop_toTopOf="@+id/reviewstar3_5"
-                    app:layout_constraintBottom_toBottomOf="@+id/reviewstar3_5"/>
-
-            <!-- Layout for three dots image -->
-                <ImageView
-                    android:id="@+id/ivw_threedots3"
-                    style="@style/ThumbUpAndDots.Dots"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/review_desc_2" />
-
-            <!-- Layout for thumb up image -->
-                <ImageView
-                    style="@style/ThumbUpAndDots"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintEnd_toStartOf="@id/ivw_threedots3"
-                    app:layout_constraintTop_toBottomOf="@id/review_desc_2" />
-
-            <!-- Layout for review title text -->
-                <TextView
-                    android:id="@+id/review_title_3"
-                    style="@style/BaseLayout.BoldText"
-                    android:text="@string/review_title_3"
-                    app:layout_constraintTop_toBottomOf="@id/reviewstar3_1"
-                    app:layout_constraintStart_toEndOf="@id/avatar_3"/>
-
-            <!-- Layout for review description text -->
-                <TextView
-                    android:id="@+id/review_desc_3"
-                    style="@style/BaseLayout.NormalText.ReviewDetails"
-                    android:text="@string/review_3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/avatar_3"
-                    app:layout_constraintTop_toBottomOf="@id/review_title_3" />
-
-        <!-- The fourth reviewer -->
-            <!-- Layout for reviewer avatar image -->
-                <ImageView
-                    android:id="@+id/avatar_4"
-                    style="@style/ReviewImageLayout"
-                    android:contentDescription="@string/imageView"
-                    android:src="@drawable/bride"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/review_desc_3" />
-
-            <!-- Layout for reviewer name text -->
-                <TextView
-                    android:id="@+id/reviewer_name_4"
-                    style="@style/BaseLayout.BoldText.ReviewBold"
-                    android:text="@string/review_name_4"
-                    app:layout_constraintStart_toEndOf="@+id/avatar_4"
-                    app:layout_constraintTop_toBottomOf="@+id/review_desc_3" />
-
-            <!-- Layout for review star images -->
-                <ImageView
-                    android:id="@+id/reviewstar4_1"
-                    style="@style/FirstStarImageLayoutBase"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/avatar_4"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_4" />
-
-                <ImageView
-                    android:id="@+id/reviewstar4_2"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar4_1"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_4" />
-
-                <ImageView
-                    android:id="@+id/reviewstar4_3"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar4_2"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_4" />
-
-                <ImageView
-                    android:id="@+id/reviewstar4_4"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar4_3"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_4" />
-
-                <ImageView
-                    android:id="@+id/reviewstar4_5"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar4_4"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_4" />
-
-            <!-- Layout for review date text -->
-                <TextView
-                    style="@style/BaseLayout.NormalText.ReviewDate"
-                    android:text="@string/date_4"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar4_5"
-                    app:layout_constraintTop_toTopOf="@+id/reviewstar4_5"
-                    app:layout_constraintBottom_toBottomOf="@+id/reviewstar4_5"/>
-
-            <!-- Layout for three dots image -->
-                <ImageView
-                    android:id="@+id/ivw_threedots4"
-                    style="@style/ThumbUpAndDots.Dots"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/review_desc_3" />
-
-            <!-- Layout for thumb up image -->
-                <ImageView
-                    style="@style/ThumbUpAndDots"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintEnd_toStartOf="@id/ivw_threedots4"
-                    app:layout_constraintTop_toBottomOf="@id/review_desc_3" />
-
-            <!-- Layout for review title text -->
-                <TextView
-                    android:id="@+id/review_title_4"
-                    style="@style/BaseLayout.BoldText"
-                    android:text="@string/review_title_4"
-                    app:layout_constraintTop_toBottomOf="@id/reviewstar4_1"
-                    app:layout_constraintStart_toEndOf="@id/avatar_4"/>
-
-            <!-- Layout for review description text -->
-                <TextView
-                    android:id="@+id/review_desc_4"
-                    style="@style/BaseLayout.NormalText.ReviewDetails"
-                    android:text="@string/review_4"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/avatar_4"
-                    app:layout_constraintTop_toBottomOf="@id/review_title_4" />
-
-        <!-- The fifth reviewer -->
-            <!-- Layout for reviewer avatar image -->
-                <ImageView
-                    android:id="@+id/avatar_5"
-                    style="@style/ReviewImageLayout"
-                    android:contentDescription="@string/imageView"
-                    android:src="@drawable/alien"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/review_desc_4" />
-
-            <!-- Layout for reviewer name text -->
-                <TextView
-                    android:id="@+id/reviewer_name_5"
-                    style="@style/BaseLayout.BoldText.ReviewBold"
-                    android:text="@string/review_name_5"
-                    app:layout_constraintStart_toEndOf="@+id/avatar_5"
-                    app:layout_constraintTop_toBottomOf="@+id/review_desc_4" />
-
-            <!-- Layout for review star images -->
-                <ImageView
-                    android:id="@+id/reviewstar5_1"
-                    style="@style/FirstStarImageLayoutBase"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/avatar_5"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_5" />
-
-                <ImageView
-                    android:id="@+id/reviewstar5_2"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar5_1"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_5" />
-
-                <ImageView
-                    android:id="@+id/reviewstar5_3"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar5_2"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_5" />
-
-                <ImageView
-                    android:id="@+id/reviewstar5_4"
-                    style="@style/FirstStarImageLayoutBase.Others"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar5_3"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_5" />
-
-                <ImageView
-                    android:id="@+id/reviewstar5_5"
-                    style="@style/FirstStarImageLayoutBase.Others.EmptyStar"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar5_4"
-                    app:layout_constraintTop_toBottomOf="@id/reviewer_name_5" />
-
-            <!-- Layout for review date string -->
-                <TextView
-                    style="@style/BaseLayout.NormalText.ReviewDate"
-                    android:text="@string/date_5"
-                    app:layout_constraintStart_toEndOf="@id/reviewstar5_5"
-                    app:layout_constraintTop_toTopOf="@+id/reviewstar5_5"
-                    app:layout_constraintBottom_toBottomOf="@+id/reviewstar5_5"/>
-
-            <!-- Layout for three dots image -->
-                <ImageView
-                    android:id="@+id/ivw_threedots5"
-                    style="@style/ThumbUpAndDots.Dots"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/review_desc_4" />
-
-            <!-- Layout for thumb up image -->
-                <ImageView
-                    style="@style/ThumbUpAndDots"
-                    android:contentDescription="@string/imageView"
-                    app:layout_constraintEnd_toStartOf="@id/ivw_threedots5"
-                    app:layout_constraintTop_toBottomOf="@id/review_desc_4" />
-
-            <!-- Layout for review title text -->
-                <TextView
-                    android:id="@+id/review_title_5"
-                    style="@style/BaseLayout.BoldText"
-                    android:text="@string/review_title_5"
-                    app:layout_constraintTop_toBottomOf="@id/reviewstar5_1"
-                    app:layout_constraintStart_toEndOf="@id/avatar_5"/>
-
-            <!-- Layout for review description text -->
-                <TextView
-                    android:id="@+id/review_desc_5"
-                    style="@style/BaseLayout.NormalText.ReviewDetails"
-                    android:text="@string/review_5"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/avatar_5"
-                    app:layout_constraintTop_toBottomOf="@id/review_title_5" />
 
             <!-- Layout for All Reviews button -->
                 <Button
                     android:id="@+id/btn_all_reviews"
                     style="@style/ReadMoreAndAllReviews"
                     android:text="@string/allreviews"
-                    android:layout_margin="5dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/review_desc_5"/>
+                    app:layout_constraintTop_toBottomOf="@+id/listView"/>
+                    <!--app:layout_constraintTop_toBottomOf="@+id/review_desc_5"-->
+                    <!--/>-->
 
             <!-- Layout for divider below All Reviews button -->
                 <View
@@ -691,17 +238,20 @@
 
             <!-- Layout for divider below All Reviews button -->
                 <RelativeLayout
+                    android:id="@+id/share_relativeLayout"
                     android:layout_width="match_parent"
                     android:layout_height="75dp"
                     app:layout_constraintTop_toBottomOf="@id/divider_2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/share"
+                        android:layout_centerHorizontal="true"
                         android:layout_marginTop="12dp"
-                        android:layout_centerHorizontal="true"/>
+                        android:contentDescription="@string/imageView"
+                        android:src="@drawable/share" />
                     <Button
                         android:id="@+id/btn_share"
                         android:layout_width="match_parent"
@@ -716,9 +266,70 @@
                         android:paddingBottom="12dp"/>
                 </RelativeLayout>
 
+            <!-- Layout for footer -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightGrey"
+                    app:layout_constraintTop_toBottomOf="@id/share_relativeLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:id="@+id/txt_Developer"
+                        style="@style/BaseLayout"
+                        android:text="@string/footer_title_1"
+                        android:textSize="16sp"/>
 
+                    <LinearLayout
+                        style="@style/FooterLayout">
 
+                        <ImageView
+                            style="@style/BaseLayout.FooterImage"
+                            android:contentDescription="@string/imageView"
+                            android:src="@drawable/email" />
+
+                        <TextView
+                            android:theme="@style/BlackTextColor.Normal"
+                            style="@style/BaseLayout.FooterTitle"
+                            android:text="@string/footer_title_2"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/FooterLayout">
+
+                        <ImageView
+                            style="@style/BaseLayout.FooterImage"
+                            android:contentDescription="@string/imageView"
+                            android:src="@drawable/permission" />
+
+                        <TextView
+                            android:theme="@style/BlackTextColor.Normal"
+                            style="@style/BaseLayout.FooterTitle"
+                            android:text="@string/footer_title_3"/>
+                    </LinearLayout>
+
+                    <View
+                        style="@style/BaseLayout.Linear.Divider"
+                        android:background="@color/darkGrey"/>
+
+                    <LinearLayout
+                        style="@style/FooterLayout"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            style="@style/BaseLayout.FooterImage"
+                            android:contentDescription="@string/imageView"
+                            android:src="@drawable/flag" />
+
+                        <TextView
+                            android:theme="@style/BlackTextColor.Normal"
+                            style="@style/BaseLayout.FooterTitle"
+                            android:text="@string/footer_title_4"/>
+                    </LinearLayout>
+
+                </LinearLayout>
             </android.support.constraint.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

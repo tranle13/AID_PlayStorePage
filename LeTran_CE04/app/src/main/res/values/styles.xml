@@ -17,17 +17,18 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="BaseLayout.BoldText">
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/black</item>
-    </style>
-
-    <style name="BaseLayout.BoldText.ReviewBold">
-        <item name="android:textSize">17sp</item>
-    </style>
-
     <style name="BaseLayout.NormalText">
         <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <style name="BlackTextColor" parent="ThemeOverlay.AppCompat">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BlackTextColor.Normal" parent="ThemeOverlay.AppCompat">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
     <style name="BaseLayout.NormalText.ReviewDate">
@@ -99,14 +100,34 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16sp</item>
+        <item name="android:layout_margin">8dp</item>
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textColor">@color/green</item>
     </style>
 
     <style name="BaseLayout.Linear.Divider">
         <item name="android:layout_height">1.5dp</item>
-        <item name="android:background">@color/grey</item>
-        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:background">@drawable/line_shape</item>
+    </style>
+
+    <style name="BaseLayout.FooterImage">
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+    </style>
+
+    <style name="BaseLayout.FooterTitle">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="FooterLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="GreenText" parent="ThemeOverlay.AppCompat">
+        <item name="android:textColor">@color/green</item>
     </style>
 
 </resources>

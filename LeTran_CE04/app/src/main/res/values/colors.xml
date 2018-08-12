@@ -6,6 +6,8 @@
     <color name="white">#FFF</color>
     <color name="black">#000</color>
     <color name="green">#39a435</color>
-    <color name="grey">#e6e6e6</color>
+    <color name="grey">#dcdcdc</color>
     <color name="lightGreen">#E8EEE0</color>
+    <color name="lightGrey">#eaeaea</color>
+    <color name="darkGrey">#c1c1c1</color>
 </resources>

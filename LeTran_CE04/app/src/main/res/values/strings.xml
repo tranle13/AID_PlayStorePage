@@ -44,6 +44,10 @@
 
     <string name="allreviews">ALL REVIEWS</string>
     <string name="share">Share</string>
+    <string name="footer_title_1">DEVELOPER</string>
+    <string name="footer_title_2">Send email</string>
+    <string name="footer_title_3">Permission details</string>
+    <string name="footer_title_4">Flag as inappropriate</string>
 
 
 
