@@ -9,4 +9,104 @@
         <item name="android:colorButtonNormal">@color/green</item>
     </style>
 
+    <style name="BaseLayout">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="BaseLayout.BoldText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="BaseLayout.BoldText.ReviewBold">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="BaseLayout.NormalText">
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <style name="BaseLayout.NormalText.ReviewDate">
+        <item name="android:layout_marginStart">7dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="BaseLayout.NormalText.ReviewDetails">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+    </style>
+
+    <style name="BaseLayout.Linear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="BaseLayout.Linear.SmallTopMarginText">
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="AppImageLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:layout_weight">0.28</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="FirstStarImageLayoutBase">
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:src">@drawable/full_star</item>
+    </style>
+
+    <style name="FirstStarImageLayoutBase.Others">
+        <item name="android:layout_marginStart">5dp</item>
+    </style>
+
+    <style name="FirstStarImageLayoutBase.Others.EmptyStar">
+        <item name="android:src">@drawable/empty_star</item>
+    </style>
+
+    <style name="ThumbUpAndDots">
+        <item name="android:layout_width">17dp</item>
+        <item name="android:layout_height">17dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:src">@drawable/thumb_up</item>
+    </style>
+
+    <style name="ThumbUpAndDots.Dots">
+        <item name="android:src">@drawable/three_dots</item>
+    </style>
+
+    <style name="ReviewImageLayout">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:background">@drawable/round_shape</item>
+        <item name="android:padding">6dp</item>
+    </style>
+
+    <style name="ReadMoreAndAllReviews">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="BaseLayout.Linear.Divider">
+        <item name="android:layout_height">1.5dp</item>
+        <item name="android:background">@color/grey</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
 </resources>

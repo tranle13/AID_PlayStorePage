@@ -2,11 +2,50 @@
     <string name="app_name">LeTran_CE04</string>
     <string name="imageView">Image Holder</string>
     <string name="appname">Friendly Pup</string>
-    <string name="developer_name">Corgi Lover</string>
+    <string name="developer_name">Puppy Lover</string>
     <string name="uninstall_button">UNINSTALL</string>
     <string name="open_button">OPEN</string>
-    <string name="app_desc">A place where you can post your corgi illustration</string>
+    <string name="app_desc">A place where you can post your puppy illustration</string>
     <string name="whats_new_title">WHAT\'S NEW</string>
     <string name="whats_new_1">• Fixed bug in posting illustration</string>
     <string name="whats_new_2">• Added chat functionality</string>
+    <string name="readmore">READ MORE</string>
+
+<!-- First review -->
+    <string name="review_name_1">Todd McMullen</string>
+    <string name="date_1">8/3/18</string>
+    <string name="review_title_1">I like this app!</string>
+    <string name="review_1">It\'s a great app. I really really love it. It\'s well-built and informative.</string>
+
+<!-- Second review -->
+    <string name="review_name_2">Michelle Gaddis</string>
+    <string name="date_2">7/21/18</string>
+    <string name="review_title_2">Love love love it!</string>
+    <string name="review_2">This is an amazing app for people who actually wanna share their work
+    to brighten up others' days.</string>
+
+<!-- Third review -->
+    <string name="review_name_3">David Morris</string>
+    <string name="date_3">7/15/18</string>
+    <string name="review_title_3">A good place to show off!</string>
+    <string name="review_3">I like this app but I think it\'s too simple.</string>
+
+<!-- Fourth review -->
+    <string name="review_name_4">Kelly Jeans</string>
+    <string name="date_4">7/1/18</string>
+    <string name="review_title_4">So cute!</string>
+    <string name="review_4">I really like the concept of this app. It\'s just so cute!</string>
+
+<!-- Fifth review -->
+    <string name="review_name_5">Michael Dean</string>
+    <string name="date_5">6/20/18</string>
+    <string name="review_title_5">Bright bright bright!</string>
+    <string name="review_5">The color theme just fits it but it\'s kinda too bright.</string>
+
+    <string name="allreviews">ALL REVIEWS</string>
+    <string name="share">Share</string>
+
+
+
+
 </resources>
