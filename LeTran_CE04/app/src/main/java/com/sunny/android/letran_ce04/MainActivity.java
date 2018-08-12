@@ -25,11 +25,12 @@ import java.util.ArrayList;
 
         populateData();
 
-        // Calculate the whole listView height
+        // Set adapter to populate data to listView
         ReviewAdapter adapter = new ReviewAdapter(MainActivity.this, data);
         ListView list = (ListView)findViewById(R.id.listView);
         list.setAdapter(adapter);
 
+        // Calculate the whole listView height
         ListAdapter list_adapter = list.getAdapter();
 
         if (list_adapter == null) {
